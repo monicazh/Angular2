@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>User profile management in JQuery AJAX</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+<section id="api">
+    <h1>User Profile App</h1>
+</section>
+<div class="container">
+    <h2>New User</h2>
+    <table class='table'>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Image</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input class="name" placeholder="Enter name" /></td>
+            <td><input class="email" placeholder="Enter email address" /></td>
+            <td><input class="age" placeholder="Enter age" /></td>
+            <td>
+                <select id="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+            </td>
+            <td><input class="image" type="file" name="image" id="image" accept="image/*"/></td>
+            <td><button class='btn btn-primary' id='add'>Add</button></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <h2>Registered Users</h2>
+
+    <h4>User Name List</h4>
+    <ul id="list" class="list"></ul>
+
+    <h4>User Details</h4>
+    <table class='table'>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input id="disp-name" readonly/></td>
+            <td><input id="disp-email"/></td>
+            <td><input id="disp-age" /></td>
+            <td>
+                <select id="disp-gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+            </td>
+
+            <td><button class='btn btn-danger' id='remove'>Remove</button></td>
+            <td><button class='btn btn-info' id='update'>Update</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+        <td id="disp-image"><img id="profile-image" src=" uploads/profile_default_img.jpg" alt="User Image" style="width:200px;height:225px;"></td>
+        <td valign="top"><label>&nbsp&nbspClick to update image</label>
+            <input class="image" value="file" type="file" name="image" id="update-image" accept="image/*"/><td>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="profile.js"></script>
+
+</body>
+</html>
